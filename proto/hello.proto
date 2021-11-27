@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+option go_package = "github.com/zhyoulun/grpc-example/proto";
+
+service Hello{
+  rpc Ping(PingRequest) returns(PingResponse) {}
+}
+
+message PingRequest{
+  string name = 1;
+}
+
+message PingResponse{
+  string content = 1;
+}
